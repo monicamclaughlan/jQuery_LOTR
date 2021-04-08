@@ -73,15 +73,20 @@ const makeHobbits = () => {
   // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
 
   // 1. create a 'ul'
+  const $ul = $('<ul>')
 
   // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a for loop
-
+  for (hobbit of hobbits) { 
+    const $li = $('<li>').text(hobbit)
+    $ul.append($li)
+  }
   // 3. also, give each hobbit (`li`) a class of "hobbit"
+  $('li').addClass("hobbit")
 
   // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-
+  $("#The-Shire").append($ul)
 };
 
 // COMMIT YOUR WORK
