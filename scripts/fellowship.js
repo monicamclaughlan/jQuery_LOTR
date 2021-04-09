@@ -187,10 +187,15 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside' 
-     const $aside = $('aside')
-     const $asidechildren = $aside.children('ul')
-     console.log($asidechildren)
-    $('li:nth-child(4)').text("Aragorn")
+    //  const $aside = $('aside')
+    //  const $asidechildren = $aside.children('ul')
+    //  console.log($asidechildren)
+    // $('li:nth-child(4)').text("Aragorn") // realized changed both li's at 4th element
+    $(document).ready(function(){
+      $('aside ul li:nth-child(4)').text('Aragorn');
+    });
+
+    //got help from Christina to get this function, came up with way to reference 4th item in list
      
 };
 
