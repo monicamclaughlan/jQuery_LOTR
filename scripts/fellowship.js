@@ -237,8 +237,10 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
+  const $white = $('#the-fellowship ul:nth-child(1) li:nth-child(1)').text('Gandalf the White')
 
   // 2. add a class "the-white" to this element
+  $white.addClass('the-white')
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
@@ -254,7 +256,16 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
+  $('#10').on('click', (event) => { 
+    alert('The Horn of Gondor has been blown!')
+    const $boromir = $('#the-fellowship ul:nth-child(1) li:nth-child(5)')
+    $boromir.wrap("<strike>")
+    const $baddy = $('.baddy:nth-child(3)')
+    $baddy.remove()
+  }) 
+
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
