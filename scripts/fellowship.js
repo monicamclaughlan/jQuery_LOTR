@@ -320,10 +320,16 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
+  $('#gollum').remove()
 
   // 2. remove all the baddies from the DOM
+  $('.baddy').remove()
 
   // 3. Move all the hobbits back to the shire
+  const $frodosam = $('#Mordor .hobbit')
+  const $merrytook = $('#the-fellowship ul:nth-child(2)')
+  $frodosam.detach().appendTo("#The-Shire")
+  $merrytook.detach().appendTo("#The-Shire")
 
 };
 
